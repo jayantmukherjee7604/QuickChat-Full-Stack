@@ -82,6 +82,7 @@ const login = async (state, credentials)=>{
             query: {
                 userId: userData._id,
             }
+            transports: ['websocket'],
         });
         newSocket.connect();
         setSocket(newSocket);
